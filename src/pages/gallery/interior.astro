@@ -1,0 +1,267 @@
+---
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+	title: 'Interior Gallery | Jadra',
+	description: 'There is plenty of space for you to relax and enjoy the beautiful surroundings. The interior of our restaurant is decorated with beautiful furniture and is fully equipped with all the necessary equipment.',
+};
+---
+
+<script>
+  // Get the button
+let mybutton = document.getElementById('btn-back-to-top');
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = 'block';
+  } else {
+    mybutton.style.display = 'none';
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener('click', backToTop);
+</script>
+
+<Layout {seo}>
+  <div class="container py-6 px-6 mx-auto">
+    <section class="mb-8 text-gray-800">
+      <style>
+        .zoom:hover img {
+          transform: scale(1.1);
+        }
+      </style>
+
+      <h1 class="text-3xl font-bold mb-12 text-center">Interior Gallery</h1>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+
+        <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+        style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+        <img src="/assets/images/gallery/interior/interior-3.webp" alt="interior"
+          class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+        <a href="#!">
+          <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+            style="background-color: rgba(0, 0, 0, 0.1)">
+            <div class="flex justify-start items-end h-full">
+            </div>
+          </div>
+          <div class="hover-overlay">
+            <div
+              class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+          </div>
+        </a>
+      </div>
+
+      <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+      style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+      <img src="/assets/images/gallery/interior/interior-2.webp" alt="interior space"
+        class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+      <a href="#!">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="flex justify-start items-end h-full">
+          </div>
+        </div>
+        <div class="hover-overlay">
+          <div
+            class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+        style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+        <img src="/assets/images/gallery/interior/interior-4.webp" alt="exterior tables"
+          class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+        <a href="#!">
+          <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+            style="background-color: rgba(0, 0, 0, 0.1)">
+            <div class="flex justify-start items-end h-full">
+            </div>
+          </div>
+          <div class="hover-overlay">
+            <div
+              class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+          </div>
+        </a>
+      </div>
+
+      <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+      style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+      <img src="/assets/images/gallery/interior/interior-1.webp" alt="outside table"
+        class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+      <a href="#!">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="flex justify-start items-end h-full">
+          </div>
+        </div>
+        <div class="hover-overlay">
+          <div
+            class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+    style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+    <img src="/assets/images/gallery/interior/interior-5.webp" alt="table"
+      class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+    <a href="#!">
+      <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.1)">
+        <div class="flex justify-start items-end h-full">
+        </div>
+      </div>
+      <div class="hover-overlay">
+        <div
+          class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+      </div>
+    </a>
+  </div>
+
+  <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+      style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+      <img src="/assets/images/gallery/interior/interior-6.webp" alt="exterior night"
+        class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+      <a href="#!">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="flex justify-start items-end h-full">
+          </div>
+        </div>
+        <div class="hover-overlay">
+          <div
+            class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+      style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+      <img src="/assets/images/gallery/interior/interior-7.webp" alt="interior night"
+        class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+      <a href="#!">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="flex justify-start items-end h-full">
+          </div>
+        </div>
+        <div class="hover-overlay">
+          <div
+            class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+      style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+      <img src="/assets/images/gallery/interior/interior-9.webp" alt="interior day"
+        class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+      <a href="#!">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="flex justify-start items-end h-full">
+          </div>
+        </div>
+        <div class="hover-overlay">
+          <div
+            class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+      style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+      <img src="/assets/images/gallery/interior/interior-10.webp" alt="interior crowded"
+        class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+      <a href="#!">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="flex justify-start items-end h-full">
+          </div>
+        </div>
+        <div class="hover-overlay">
+          <div
+            class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+      style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+      <img src="/assets/images/gallery/interior/interior-8.webp" alt="interior"
+        class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+      <a href="#!">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="flex justify-start items-end h-full">
+          </div>
+        </div>
+        <div class="hover-overlay">
+          <div
+            class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </div>
+      </a>
+    </div>
+
+    <div class="zoom shadow-lg gallery-image relative overflow-hidden bg-no-repeat bg-cover"
+      style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+      <img src="/assets/images/gallery/interior/interior-11.webp" alt="exterior people"
+        class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+      <a href="#!">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.1)">
+          <div class="flex justify-start items-end h-full">
+          </div>
+        </div>
+        <div class="hover-overlay">
+          <div
+            class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+        </div>
+      </a>
+    </div>
+
+      </div>
+    </section>
+    <hr class="solid mb-2">
+  </div>
+  <button
+type="button"
+data-mdb-ripple="true"
+data-mdb-ripple-color="light"
+class="p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out hidden bottom-5 right-5 fixed"
+id="btn-back-to-top"
+>
+<svg
+  aria-hidden="true"
+  focusable="false"
+  data-prefix="fas"
+  class="w-4 h-4"
+  role="img"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 448 512"
+>
+  <path
+    fill="currentColor"
+    d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+  ></path>
+</svg>
+</button>
+</Layout>
+
+<style>
+  .gallery-image {
+		border-radius: var(--theme-shape-radius);
+	}
+</style>

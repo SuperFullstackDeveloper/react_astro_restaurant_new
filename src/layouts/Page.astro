@@ -1,0 +1,38 @@
+---
+import Header from '../components/header/Header.astro';
+import Footer from '../components/footer/Footer.astro';
+import Layout from './Base.astro';
+import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
+import { footerSocials } from '../config/footer';
+
+export interface Props {
+	seo?: BaseHeadProps;
+}
+
+import { nav } from '../config/nav.js';
+
+const { seo } = Astro.props as Props;
+---
+
+<Layout {seo}>
+	<Header rightMenu navData={nav} slot="header">
+		<span slot="logo" id="show"> </span>
+	</Header>
+	<div id="page" class="px-0">
+		<slot />
+	</div>
+	<Footer
+		slot="footer"
+		background="var(--theme-surface-1)"
+		color="var(--theme-on-surface-1)"
+		{footerSocials}
+	/>
+</Layout>
+
+<style>
+	@media only screen and (max-width: 1300px) {
+		#show {
+			display: none;
+		}
+	}
+</style>

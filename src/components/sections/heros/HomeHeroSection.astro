@@ -1,0 +1,349 @@
+---
+import { Container, Button } from '@littlesticks/odyssey-theme-components';
+import Logo from '../../Logo.astro';
+---
+
+<Container>
+	<div class="container px-6 mx-auto">
+
+    <!-- Section: Design Block -->
+    <section class="mb-6 text-gray-800 text-center lg:text-left background-radial-gradient">
+
+      <div class="relative overflow-hidden bg-no-repeat bg-cover avatars head-image">
+        <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+          style="background-color: rgba(0, 0, 0, 0.18)">
+          <div class="flex justify-center items-center h-full">
+            <div class="text-center text-white px-6 py-6 md:py-0 md:px-12 max-w-[800px]">
+              <div class="logo-mobile mx-auto">
+								<Logo />
+							</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+	<div class="container my-8 px-6 mx-auto">
+
+		<!-- Section: Design Block -->
+		<section class="mb-8 text-gray-800 text-center lg:text-left">
+			<style>
+				@media (min-width: 992px) {
+					.rotate-lg-6 {
+						transform: rotate(6deg);
+					}
+				}
+	
+				/* These are the KEY styles - you can add them directly to any object you want in your project */
+				.fancy-border-radius {
+					border-radius: 53% 47% 52% 48% / 36% 41% 59% 64%;
+				}
+			</style>
+	
+			<!-- Jumbotron -->
+			<div class="container mx-auto xl:px-32 text-center lg:text-left">
+				<div class="grid lg:grid-cols-2 items-center">
+					<div class="mb-12 lg:mb-0">
+						<div
+							class="relative block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14"
+							style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px); z-index: 1"
+						>
+						<h1 class="text-3xl font-bold mb-4 display-5 text-center text-blue-900">Konoba Jadra</h1>
+							<p class="text-gray-500 mb-6 text-center">
+								A seafood restaurant in Kornati National Park. Located on the island of Piškera, across from the ACI marina.
+							</p>
+	
+							<div class="hero-btns__container">
+									<Button href="/menu" materialIcon="article">The Menu</Button>
+									<Button href="/contact" materialIcon="call">Reservations</Button>
+							</div>
+						</div>
+					</div>
+	
+					<div>
+						<img
+							src="/assets/images/home/home-1.webp"
+							class="w-full shadow-lg avatars"
+							alt="Home islands image"
+						/>
+					</div>
+				</div>
+			</div>
+			<!-- Jumbotron -->
+		</section>
+		<!-- Section: Design Block -->
+	</div>
+
+	<hr class="solid mb-8">
+	<div class="container px-12 mx-auto">
+		<section class="mb-16 text-gray-800">
+			<style>
+				.zoom:hover img {
+					transform: scale(1.1);
+				}
+			</style>
+			<div class="grid lg:grid-cols-3 gap-6">
+
+				<div class="zoom shadow-lg home-image relative overflow-hidden bg-no-repeat bg-cover"
+					style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+					<img src="/assets/images/home/home-4.webp" alt="Staff Image"
+						class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+						<div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden">
+						</div>
+						<div class="hover-overlay">
+							<div
+								class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
+								style="background-color: rgba(153, 153, 153, 0.15)"></div>
+						</div>
+				</div>
+	
+				<div class="zoom shadow-lg home-image relative overflow-hidden bg-no-repeat bg-cover"
+					style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+					<img src="/assets/images/home/home-2.webp" alt="Indoors Image"
+						class="w-full transition duration-300 ease-linear align-middle" loading="lazy" />
+						<div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+							style="background-color: rgba(0, 0, 0, 0.1)">
+							<div class="flex justify-start items-end h-full">
+							</div>
+						</div>
+						<div class="hover-overlay">
+							<div
+								class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
+								style="background-color: rgba(153, 153, 153, 0.15)"></div>
+						</div>
+				</div>
+	
+				<div class="zoom shadow-lg home-image relative overflow-hidden bg-no-repeat bg-cover"
+					style="background-position: 50%;" data-mdb-ripple="true" data-mdb-ripple-color="dark">
+					<img src="/assets/images/home/home-3.webp" alt="Outdoors Image"
+						class="w-full transition duration-300 ease-linear align-middle" loading="lazy"/>
+						<div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
+							style="background-color: rgba(0, 0, 0, 0.1)">
+							<div class="flex justify-start items-end h-full">
+							</div>
+						</div>
+						<div class="hover-overlay">
+							<div
+								class="mask absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
+								style="background-color: rgba(153, 153, 153, 0.15)"></div>
+						</div>
+				</div>
+			</div>
+			<div class="mt-6 flex flex-row justify-center items-center">
+				<Button href="/gallery" materialIcon="collections"
+					>Image Gallery</Button
+				>
+			</div>
+		</section>
+	</div>
+	<div class="container mt-6 px-6 mx-auto w-5/6">
+		<p class="text-sm text-zinc-600 italic ">
+			"This restaurant is recommended to Mediterranean cuisine lovers. Perfectly cooked fried fish, prawns and lamb have an appetizing taste. In accordance with the guests' opinions, waiters offer good che here. Ale lovers will find it delicious.
+		</p>
+		<p class="mt-6 text-sm text-zinc-600 italic">
+			The atmosphere of hospitality of Konoba Jadra highly depends on the staff, that is energetic here. Service at this place is something one can name enjoyable. Prices are low for the quality you get. A lot of people note that the atmosphere is pretty here."
+			<p class="mt-6 text-md text-zinc-600">
+				<a href="https://restaurantguru.com/Konoba-Jadra-Kornati" class="primary-color" target="_blank"> - Restaurant Guru</a>
+			</p> 
+		</p>
+	</div>
+	<hr class="solid mt-8">
+	<div class="container my-12 px-12 mx-auto">
+		<section class=" text-gray-800 text-center">
+			<h2 class="text-3xl font-bold mb-2 text-zinc-800">Reviews</h2>
+			<section class="text-sm mb-12"><h3>(Clicking Review Titles leads to the actual Review)</h3></section>
+			<div
+				id="carouselReviews"
+				class="relative"
+				data-te-carousel-init
+				data-te-carousel-slide
+			>
+				<!--Carousel items-->
+				<div
+					class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+				>
+
+					<div
+						class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+						data-te-carousel-active
+						data-te-carousel-item
+						style="backface-visibility: hidden"
+					>
+					<img class="avatars shadow-lg mb-4 mx-auto"
+					src="/assets/images/avatars/review-1.jpg" alt="avatar" style="width: 150px" />
+						<div class="flex flex-wrap justify-center mb-8">
+							<div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+								<h4 class="text-lg font-bold mb-3">Fernando_V6</h4>
+								<p class="font-medium text-blue-800 mb-4"><a href="https://www.tripadvisor.com/ShowUserReviews-g303811-d10447997-r844406219-Konoba_Jadra-Kornati_Islands_National_Park_Sibenik_Knin_County_Dalmatia.html" target="_blank">Oasis for gourmets</a></p>
+								<p class="text-gray-500 mb-6">
+									<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+										class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+										<path fill="currentColor"
+											d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+										</path>
+									</svg>						Lovely service and fresh meals. My family and I stayed for 3 days on the dock in front of the restaurant and have been eating seafood with great Posip vine for a drink. We truly enjoyed and experienced truly medditeranean ambience and I’m sure we will come back. I recommend it to everyone who wants a good rest with full stomach :)
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+						data-te-carousel-item
+						style="backface-visibility: hidden"
+					>
+					<img class="avatars shadow-lg mb-4 mx-auto"
+					src="/assets/images/avatars/review-2.jpg" alt="avatar" style="width: 150px" />
+						<div class="flex flex-wrap justify-center mb-8">
+							<div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+								<h4 class="text-lg font-bold mb-3">Quoshak</h4>
+								<p class="font-medium text-blue-800 mb-4"><a href="https://www.tripadvisor.com/ShowUserReviews-g303811-d10447997-r763379681-Konoba_Jadra-Kornati_Islands_National_Park_Sibenik_Knin_County_Dalmatia.html" target="_blank">Friendly staff and nice food</a></p>
+								<p class="text-gray-500 mb-6">
+									<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+										class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+										<path fill="currentColor"
+											d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+										</path>
+									</svg>
+									I was there with my friends, and we were mostly eating see food. Everybody was very satisfied with the food. Very good fish from grill. Location is nice but you have to get there by small boat.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+						data-te-carousel-item
+						style="backface-visibility: hidden"
+					>
+					<img class="avatars shadow-lg mb-4 mx-auto"
+							src="/assets/images/avatars/review-3.jpg" alt="avatar" style="width: 150px" />
+						<div class="flex flex-wrap justify-center">
+							<div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
+								<h4 class="text-lg font-bold mb-3">iLili_p</h4>
+								<p class="font-medium text-blue-800 mb-4"><a href="https://www.tripadvisor.com/ShowUserReviews-g303811-d10447997-r705176625-Konoba_Jadra-Kornati_Islands_National_Park_Sibenik_Knin_County_Dalmatia.html" target="_blank">Nice Dalmatian restaurant</a></p>
+								<p class="text-gray-500">
+									<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left"
+										class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+										<path fill="currentColor"
+											d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+										</path>
+									</svg>It is a good restaurant with very friendly staff. They are offering free transport from marina Piškera. Nice location, stone house with park.
+									It is not fancy, but typical Dalmatian restaurant in the middle of Kornati which offers simple dishes - fresh fish, other sea food and lamb. Fish was very good and fresh.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<!--Carousel controls - prev item-->
+				<button
+					class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+					type="button"
+					data-te-target="#carouselReviews"
+					data-te-slide="prev"
+				>
+					<span class="inline-block h-8 w-8">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="black"
+							class="h-6 w-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+						</svg>
+					</span>
+					<span
+						class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+						>Previous</span
+					>
+				</button>
+				<!--Carousel controls - next item-->
+				<button
+					class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+					type="button"
+					data-te-target="#carouselReviews"
+					data-te-slide="next"
+				>
+					<span class="inline-block h-8 w-8">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="black"
+							class="h-6 w-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+						</svg>
+					</span>
+					<span
+						class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+						>Next</span
+					>
+				</button>
+			</div>
+		</section>
+		
+		<hr class="solid my-12">
+	</div>
+</Container>
+
+<style>
+	.logo-mobile{
+		width: 55%;
+		margin-bottom: 4rem;
+	}
+	.avatars {
+		border-radius: var(--theme-shape-radius);
+	}
+	.primary-color{
+		color: var(--theme-primary);
+	}
+	.head-image{
+		background-position: 50%;
+    background-image: url('https://static.wixstatic.com/media/5048f9_a1d651e651dd4dde89c0e92be56b2cbb~mv2.jpg/v1/fill/w_712,h_540,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/5048f9_a1d651e651dd4dde89c0e92be56b2cbb~mv2.jpg');
+    height: 400px;
+	}
+	.home-image {
+		border-radius: var(--theme-shape-radius);
+	}
+	.hero-btns__container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-items: center;
+		margin-right: auto;
+	}	
+	@media only screen and (max-width: 800px) {
+    .hero-btns__container {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem;
+		align-items: center;
+		justify-items: center;
+		margin-right: auto;
+		margin-bottom: 1.5rem;
+		}
+		.logo-mobile{
+		width: 40%;
+		margin-bottom: 2rem;
+	}
+		.head-image{
+		background-position: 50%;
+    background-image: url('/assets/images/home/boat2.webp');
+    height: 200px;
+	}
+		
+	}
+
+</style>

@@ -1,0 +1,101 @@
+---
+import settings from '../../config/settings.js';
+import ThemeProvider from '../theme-switcher/ThemeProvider.astro';
+
+export interface Props {
+	title?: string;
+	description?: string;
+	canonicalURL?: URL | string;
+	image?: string;
+}
+
+const title = Astro.props.title || settings.title;
+const description = Astro.props.description || settings.description;
+const { canonicalURL = new URL(Astro.url.pathname, Astro.site) } = Astro.props;
+const image = new URL(Astro.props.image || '/assets/images/social.jpg', Astro.site);
+---
+
+<!-- Global Metadata -->
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width' />
+<link rel='icon' type='image/png' href='/favicon.png' />
+
+<link rel='preload' as='style' href='/styles/index.css' defer />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name='title' content={title} />
+<meta name='description' content={description} />
+<link rel='canonical' href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property='og:type' content='website' />
+<meta property='og:url' content={canonicalURL} />
+<meta property='og:title' content={title} />
+<meta property='og:description' content={description} />
+<meta property='og:image' content={image} />
+<meta property='og:image:width' content='1500' />
+<meta property='og:image:height' content='786' />
+
+<!-- Twitter -->
+<meta property='twitter:card' content='summary_large_image' />
+<meta property='twitter:url' content={canonicalURL} />
+<meta property='twitter:title' content={title} />
+<meta property='twitter:description' content={description} />
+<meta property='twitter:image' content={image} />
+
+<!-- Google Fonts -->
+<link rel='preconnect' href='https://fonts.googleapis.com' defer />
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin defer />
+<link
+	rel='preload'
+	href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap'
+	as='style'
+	onload="this.onload=null;this.rel='stylesheet';"
+	async
+/>
+<link
+	rel='preload'
+	href='https://fonts.googleapis.com/icon?family=Material+Icons'
+	as='style'
+	onload="this.onload=null;this.rel='stylesheet';"
+	async
+/>
+
+<noscript>
+	<link
+		href='https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@600..700&family=Lato:wght@300..700&display=swap'
+		rel='stylesheet'
+		type='text/css'
+	/>
+	<link
+		href='https://fonts.googleapis.com/icon?family=Material+Icons'
+		rel='stylesheet'
+		type='text/css'
+	/>
+</noscript>
+
+<link rel='stylesheet' href='/styles/index.css' defer />
+
+<!-- Google tag (gtag.js) -->
+<script async type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-CH40Q3QWD7'></script>
+<script type='text/partytown'>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+
+	gtag('js', new Date());
+
+	gtag('config', 'G-CH40Q3QWD7');
+
+
+
+</script>
+
+<script src='https://cdn.jsdelivr.net/npm/tw-elements@1.0.0-beta2/dist/js/tw-elements.umd.min.js'></script>
+
+<!-- For Demonstration of the themes -->
+{settings.enableThemeSwitcher &&
+<ThemeProvider />}

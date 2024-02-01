@@ -1,0 +1,330 @@
+---
+import { Container } from '@littlesticks/odyssey-theme-components';
+---
+
+<script>
+	// Get the button
+	let mybutton = document.getElementById('btn-back-to-top');
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function () {
+		scrollFunction();
+	};
+
+	function backToTop() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+
+	function scrollFunction() {
+		if (
+			document.body.scrollTop > 20 ||
+			document.documentElement.scrollTop > 20
+		) {
+			mybutton.style.display = 'block';
+		} else {
+			mybutton.style.display = 'none';
+		}
+	}
+	// When the user clicks on the button, scroll to the top of the document
+	mybutton.addEventListener('click', backToTop);
+</script>
+
+<Container>
+	<section class=" text-gray-800 text-center my-6">
+		<h1 class="text-3xl font-bold text-zinc-800">Food Menu</h1>
+		<h2 class="text-sm mb-4">(Click/Tap on Menus to open bigger image)</h2>
+		<div
+			id="carouselFoodMenu"
+			class="relative"
+			data-te-carousel-init
+			data-te-carousel-slide
+		>
+			<!--Carousel items-->
+			<div
+				class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+			>
+				<!--Croatia-->
+				<div
+					class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+					data-te-carousel-active
+					data-te-carousel-item
+					style="backface-visibility: hidden"
+				>
+					<a
+						href="/assets/images/menu/menu-hr.webp"
+						target="_blank"
+						aria-label="hr menu"
+					>
+						<img
+							class="menus shadow-lg mb-6 mx-auto"
+							src="/assets/images/menu/menu-hr.webp"
+							alt="croatian menu"
+							style="max-width: 756px;"
+						/>
+					</a>
+				</div>
+				<!--Germany-->
+				<div
+					class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+					data-te-carousel-item
+					style="backface-visibility: hidden"
+				>
+					<a
+						href="/assets/images/menu/menu-de.webp"
+						target="_blank"
+						aria-label="de menu"
+					>
+						<img
+							class="menus shadow-lg mb-6 mx-auto"
+							src="/assets/images/menu/menu-de.webp"
+							alt="german menu"
+							style="max-width: 756px;"
+						/>
+					</a>
+				</div>
+				<!--Italy-->
+				<div
+					class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+					data-te-carousel-item
+					style="backface-visibility: hidden"
+				>
+					<a
+						href="/assets/images/menu/menu-it.webp"
+						target="_blank"
+						aria-label="it menu"
+					>
+						<img
+							class="menus shadow-lg mb-6 mx-auto"
+							src="/assets/images/menu/menu-it.webp"
+							alt="italian menu"
+							style="max-width: 756px;"
+						/>
+					</a>
+				</div>
+				<!--English-->
+				<div
+					class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+					data-te-carousel-item
+					style="backface-visibility: hidden"
+				>
+					<a
+						href="/assets/images/menu/menu-eng.webp"
+						target="_blank"
+						aria-label="eng menu"
+					>
+						<img
+							class="menus shadow-lg mb-6 mx-auto"
+							src="/assets/images/menu/menu-eng.webp"
+							alt="english menu"
+							style="max-width: 756px;"
+						/>
+					</a>
+				</div>
+			</div>
+
+			<!--Carousel controls - prev item-->
+			<button
+				class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+				type="button"
+				data-te-target="#carouselFoodMenu"
+				data-te-slide="prev"
+			>
+				<span class="inline-block h-8 w-8">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="black"
+						class="h-6 w-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+					</svg>
+				</span>
+				<span
+					class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+					>Previous</span
+				>
+			</button>
+			<!--Carousel controls - next item-->
+			<button
+				class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+				type="button"
+				data-te-target="#carouselFoodMenu"
+				data-te-slide="next"
+			>
+				<span class="inline-block h-8 w-8">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="black"
+						class="h-6 w-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+					</svg>
+				</span>
+				<span
+					class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+					>Next</span
+				>
+			</button>
+		</div>
+	</section>
+
+	<hr class="solid my-8" />
+
+	<section class=" text-gray-800 text-center my-6">
+		<h2 class="text-3xl font-bold mb-4 text-zinc-800">Drinks Menu</h2>
+		<div
+			id="carouselDrinksMenu"
+			class="relative"
+			data-te-carousel-init
+			data-te-carousel-slide
+		>
+			<!--Carousel items-->
+			<div
+				class="relative w-full overflow-hidden after:clear-both after:block after:content-['']"
+			>
+				<!--Croatia-->
+				<div
+					class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+					data-te-carousel-active
+					data-te-carousel-item
+					style="backface-visibility: hidden"
+				>
+					<a
+						href="/assets/images/menu/drinks-hr.webp"
+						target="_blank"
+						aria-label="hr drinks"
+					>
+						<img
+							class="menus shadow-lg mb-6 mx-auto"
+							src="/assets/images/menu/drinks-hr.webp"
+							alt="drinks croatian"
+							style="max-width: 756px;"
+						/>
+					</a>
+				</div>
+				<!--English-->
+				<div
+					class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+					data-te-carousel-item
+					style="backface-visibility: hidden"
+				>
+					<a
+						href="/assets/images/menu/drinks-eng.webp"
+						target="_blank"
+						aria-label="eng drinks"
+					>
+						<img
+							class="menus shadow-lg mb-6 mx-auto"
+							src="/assets/images/menu/drinks-eng.webp"
+							alt="drinks english"
+							style="max-width: 756px;"
+						/>
+					</a>
+				</div>
+			</div>
+
+			<!--Carousel controls - prev item-->
+			<button
+				class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+				type="button"
+				data-te-target="#carouselDrinksMenu"
+				data-te-slide="prev"
+			>
+				<span class="inline-block h-8 w-8">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="black"
+						class="h-6 w-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+					</svg>
+				</span>
+				<span
+					class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+					>Previous</span
+				>
+			</button>
+			<!--Carousel controls - next item-->
+			<button
+				class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+				type="button"
+				data-te-target="#carouselDrinksMenu"
+				data-te-slide="next"
+			>
+				<span class="inline-block h-8 w-8">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="black"
+						class="h-6 w-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+					</svg>
+				</span>
+				<span
+					class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+					>Next</span
+				>
+			</button>
+		</div>
+	</section>
+	<hr class="solid mb-12" />
+
+	<button
+		type="button"
+		data-mdb-ripple="true"
+		data-mdb-ripple-color="light"
+		class="p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out hidden bottom-5 right-5 fixed"
+		id="btn-back-to-top"
+	>
+		<svg
+			aria-hidden="true"
+			focusable="false"
+			data-prefix="fas"
+			class="w-4 h-4"
+			role="img"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 448 512"
+		>
+			<path
+				fill="currentColor"
+				d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+			></path>
+		</svg>
+	</button>
+</Container>
+
+<style>
+	.menus {
+		width: 70%;
+	}
+
+	@media (max-width: 768px) {
+		.menus {
+			width: 90%;
+		}
+	}
+</style>
